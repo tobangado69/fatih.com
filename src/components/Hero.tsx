@@ -6,11 +6,11 @@ export default function Hero() {
       {/* Ticker */}
       <div className="ticker-wrap border-b border-white/5 py-2 bg-black/40 relative z-20">
         <div className="ticker-content text-xs font-medium text-gray-500 tracking-wide uppercase">
-          <span className="mx-6">Available for 2025 projects</span> &bull;
+          <span className="mx-6">Available for 2026 projects</span> &bull;
           <span className="mx-6">UX/UI Design &amp; Creative Direction</span> &bull;
           <span className="mx-6">Photography &amp; Visual Presets</span> &bull;
           <span className="mx-6">Brand Identity &amp; Systems</span> &bull;
-          <span className="mx-6">Available for 2025 projects</span> &bull;
+          <span className="mx-6">Available for 2026 projects</span> &bull;
           <span className="mx-6">UX/UI Design &amp; Creative Direction</span> &bull;
           <span className="mx-6">Photography &amp; Visual Presets</span> &bull;
           <span className="mx-6">Brand Identity &amp; Systems</span>

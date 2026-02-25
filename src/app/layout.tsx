@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ALEX | Portfolio",
+  title: "Fatih | Portfolio",
   description:
     "UX/UI Designer & Creative — Crafting digital experiences and visual presets",
 };

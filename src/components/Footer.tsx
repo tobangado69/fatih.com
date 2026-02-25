@@ -9,7 +9,7 @@ export default function Footer() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-2.5 w-2.5 rounded-full bg-blue-500" />
                 <span className="text-lg font-semibold tracking-tight text-white">
-                  ALEX
+                  Fatih
                 </span>
               </div>
               <p className="text-white/60 max-w-md">
@@ -20,13 +20,39 @@ export default function Footer() {
 
             <div className="flex items-center gap-4 text-white/60">
               <a href="#" className="hover:text-white transition">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
               </a>
               <a href="#" className="hover:text-white transition">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6.5 11.65 7.5 21"/></svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
+                  <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
+                  <path d="M8.56 2.75c4.37 6 6.5 11.65 7.5 21" />
+                </svg>
               </a>
               <a href="#" className="hover:text-white transition">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12ZM18.91 18.74h-3v-4.26c0-1.08-.43-1.58-1.28-1.58-.93 0-1.44.62-1.44 1.58v4.26h-3v-9h3v1.3a3.15 3.15 0 0 1 2.71-1.49c1.69 0 3.01 1.03 3.01 3.16Z"/></svg>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12ZM18.91 18.74h-3v-4.26c0-1.08-.43-1.58-1.28-1.58-.93 0-1.44.62-1.44 1.58v4.26h-3v-9h3v1.3a3.15 3.15 0 0 1 2.71-1.49c1.69 0 3.01 1.03 3.01 3.16Z" />
+                </svg>
               </a>
             </div>
 
@@ -40,7 +66,16 @@ export default function Footer() {
                   className="inline-flex items-center gap-2 rounded-full bg-blue-600 text-white px-4 py-2 text-sm font-medium hover:bg-blue-500 transition"
                 >
                   Get in touch
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </a>
                 <a
                   href="#"
@@ -100,9 +135,21 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/60">
-            &copy; 2025 ALEX Design. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-sm text-white/60">
+              &copy; 2026 Fatih Design. All rights reserved.
+            </p>
+            <p className="text-sm text-white/40">
+              by <a 
+                href="https://rohimdev.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition"
+              >
+                rohimdev.com
+              </a>
+            </p>
+          </div>
           <div className="flex items-center gap-6 text-sm text-white/60">
             <a href="#" className="hover:text-white transition">
               Case Studies

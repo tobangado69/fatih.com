@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Gallery from "@/components/Gallery";
 import Work from "@/components/Work";
 import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -16,9 +15,8 @@ export default function Home() {
         <Header />
         <Hero />
         <Gallery />
-        <Work />
         <Services />
-        <Testimonials />
+        <Work />
         <Contact />
         <Footer />
       </div>
