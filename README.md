@@ -1,4 +1,4 @@
-# Fatiha Portfolio
+# Fatih Portfolio
 
 A modern portfolio website showcasing design work, services, and case studies. Built with Next.js and Tailwind CSS.
 
@@ -71,3 +71,5 @@ Deploy to [Vercel](https://vercel.com) or any Node.js host. Add `NEXT_PUBLIC_WEB
 ## License
 
 MIT License – see [LICENSE](LICENSE) for details.
+
+Created by [rohimdev.com](https://rohimdev.com)
