@@ -7,11 +7,17 @@ export default function Hero() {
       <div className="ticker-wrap border-b border-white/5 py-2 bg-black/40 relative z-20">
         <div className="ticker-content text-xs font-medium text-gray-500 tracking-wide uppercase">
           <span className="mx-6">Available for 2026 projects</span> &bull;
-          <span className="mx-6">UX/UI Design &amp; Creative Direction</span> &bull;
+          <span className="mx-6">
+            UX/UI Design &amp; Creative Direction
+          </span>{" "}
+          &bull;
           <span className="mx-6">Photography &amp; Visual Presets</span> &bull;
           <span className="mx-6">Brand Identity &amp; Systems</span> &bull;
           <span className="mx-6">Available for 2026 projects</span> &bull;
-          <span className="mx-6">UX/UI Design &amp; Creative Direction</span> &bull;
+          <span className="mx-6">
+            UX/UI Design &amp; Creative Direction
+          </span>{" "}
+          &bull;
           <span className="mx-6">Photography &amp; Visual Presets</span> &bull;
           <span className="mx-6">Brand Identity &amp; Systems</span>
         </div>
@@ -44,14 +50,39 @@ export default function Hero() {
               href="#work"
               className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 whitespace-nowrap shadow-[0_0_20px_rgba(255,255,255,0.15)]"
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
               View Case Studies
             </a>
             <a
               href="#contact"
               className="border border-white/20 bg-white/5 px-8 py-4 rounded-xl text-sm text-white/90 backdrop-blur hover:bg-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
               Book Consultation
             </a>
           </div>
@@ -84,7 +115,16 @@ export default function Hero() {
                   LIVE
                 </div>
                 <div className="glass-panel w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <circle cx="12" cy="5" r="1" />
+                    <circle cx="12" cy="12" r="1" />
+                    <circle cx="12" cy="19" r="1" />
+                  </svg>
                 </div>
               </div>
 
@@ -110,9 +150,23 @@ export default function Hero() {
           </div>
 
           {/* Floating element */}
-          <div className="absolute bottom-10 right-10 glass-panel p-4 rounded-2xl flex items-center gap-3 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-white/10 z-20 animate-bounce" style={{ animationDuration: "3s" }}>
+          <div
+            className="absolute bottom-10 right-10 glass-panel p-4 rounded-2xl flex items-center gap-3 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] border border-white/10 z-20 animate-bounce"
+            style={{ animationDuration: "3s" }}
+          >
             <div className="bg-blue-500/10 p-2 rounded-lg text-blue-400 animate-flicker">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
             </div>
             <div>
               <div className="text-xs text-gray-400">Creativity Score</div>

@@ -10,6 +10,12 @@ export default function Work() {
             Featured case studies demonstrating problem-solving across fintech,
             healthcare, and e-commerce sectors.
           </p>
+          <a
+            href="/work"
+            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-500 transition-colors"
+          >
+            View All Projects
+          </a>
         </div>
 
         <div className="grid gap-8 md:gap-12 lg:gap-16">

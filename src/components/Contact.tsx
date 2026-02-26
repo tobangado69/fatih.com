@@ -1,16 +1,27 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+const testimonials = [
+  {
+    quote: "Working with Fatih transformed our product. The attention to detail and user-centric approach resulted in a 40% increase in user engagement.",
+    author: "Sarah Chen",
+    role: "CEO, TechStart",
+    avatar: "SC",
+  },
+  {
+    quote: "The best designer I've ever worked with. Delivered beyond expectations and always maintaining clear communication throughout.",
+    author: "Michael Ross",
+    role: "Product Manager, FinFlow",
+    avatar: "MR",
+  },
+  {
+    quote: "Our design system is now scalable and consistent. Fatih's work has significantly improved our development workflow.",
+    author: "Emily Watson",
+    role: "CTO, DataSync",
+    avatar: "EW",
+  },
+];
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  };
-
   return (
     <section
       id="contact"
@@ -59,130 +70,60 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
-              {[
-                { value: "24h", label: "Response time" },
-                { value: "Remote", label: "Preferred" },
-                { value: "Figma", label: "Expertise" },
-              ].map((stat, i) => (
-                <div key={i}>
-                  <div className="text-xl font-semibold text-gray-900 mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 text-white px-6 py-3 font-medium hover:bg-blue-500 transition-colors"
+            >
+              Get in Touch
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
           </div>
 
-          {/* Contact Form */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl bg-white border border-gray-200 p-8 shadow-sm">
-              {submitted ? (
-                <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#22c55e"
-                      strokeWidth="2"
-                    >
-                      <path d="M20 6 9 17l-5-5" />
-                    </svg>
+          {/* Right Content - Testimonials */}
+          <div className="space-y-6">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider">
+              What Clients Say
+            </h3>
+            {testimonials.map((testimonial, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <svg
+                  className="w-8 h-8 text-blue-500 mb-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  {testimonial.quote}
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-semibold text-sm">
+                    {testimonial.avatar}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Message Sent!
-                  </h3>
-                  <p className="text-gray-600">
-                    I&apos;ll get back to you within 24 hours.
-                  </p>
+                  <div>
+                    <div className="font-medium text-gray-900">
+                      {testimonial.author}
+                    </div>
+                    <div className="text-sm text-gray-500">{testimonial.role}</div>
+                  </div>
                 </div>
-              ) : (
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-900 mb-2">
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition focus:bg-white"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-900 mb-2">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition focus:bg-white"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition focus:bg-white"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-2">
-                      Project Type
-                    </label>
-                    <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition focus:bg-white">
-                      <option value="">Select project type</option>
-                      <option value="webapp">Web Application</option>
-                      <option value="mobile">Mobile App</option>
-                      <option value="system">Design System</option>
-                      <option value="marketing">Marketing Website</option>
-                      <option value="preset">Photo Presets</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-2">
-                      Project Details
-                    </label>
-                    <textarea
-                      rows={4}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition resize-none focus:bg-white"
-                      placeholder="Tell me about your project..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 text-white px-6 py-3 font-medium hover:bg-blue-500 transition-colors"
-                  >
-                    Send Message
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <line x1="22" y1="2" x2="11" y2="13" />
-                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                    </svg>
-                  </button>
-                </form>
-              )}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Work", href: "/work" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -16,9 +17,9 @@ export default function Header() {
     <header className="flex items-center justify-between px-6 md:px-10 py-5 border-b border-white/5 sticky top-0 bg-[#050505]/80 backdrop-blur-md z-50">
       <div className="flex items-center gap-3">
         <div className="h-2.5 w-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)]" />
-        <span className="text-base md:text-lg font-semibold text-white tracking-tight cursor-pointer">
+        <Link href="/" className="text-base md:text-lg font-semibold text-white tracking-tight cursor-pointer">
           Fatih
-        </span>
+        </Link>
       </div>
 
       {/* Desktop nav */}

@@ -1,9 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
-const categories = ["All", "Presets", "Photography", "UI/UX", "Branding"];
-
 const galleryItems = [
   {
     src: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/37e18797-a6da-4246-9868-7ae06d1d06a1_1600w.png",
@@ -66,17 +62,7 @@ const gridItems = [
 ];
 
 export default function Gallery() {
-  const [active, setActive] = useState("All");
-
-  const filteredGrid =
-    active === "All"
-      ? gridItems
-      : gridItems.filter((item) => item.tag === active);
-
-  const filteredExpand =
-    active === "All"
-      ? galleryItems
-      : galleryItems.filter((item) => item.tag === active);
+  const allItems = [...galleryItems, ...gridItems];
 
   return (
     <section id="gallery" className="bg-black relative">
@@ -94,28 +80,21 @@ export default function Gallery() {
             </p>
           </div>
           <div className="flex items-center gap-3 flex-wrap justify-center">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActive(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
-                  active === cat
-                    ? "bg-white text-black"
-                    : "border border-white/10 text-white hover:bg-white/5"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+            <a
+              href="/gallery"
+              className="px-4 py-2 rounded-full text-xs font-medium transition-all bg-white text-black hover:bg-zinc-200"
+            >
+              View All
+            </a>
           </div>
         </div>
       </div>
 
       {/* Expandable Card Row */}
-      {filteredExpand.length > 0 && (
+      {allItems.length > 0 && (
         <div className="px-6 md:px-10 pb-8">
           <div className="flex overflow-hidden w-full h-[500px] md:h-[700px] rounded-2xl gap-1 items-stretch">
-            {filteredExpand.map((item, i) => (
+            {allItems.map((item, i) => (
               <div
                 key={i}
                 className="gallery-card overflow-hidden cursor-pointer flex relative group bg-zinc-900 rounded-sm items-center justify-center"

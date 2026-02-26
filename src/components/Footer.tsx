@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-black/95 border-white/10 border-t relative backdrop-blur">
@@ -6,12 +8,12 @@ export default function Footer() {
           {/* Left */}
           <div className="space-y-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
+              <Link href="/" className="flex items-center gap-3 mb-4">
                 <div className="h-2.5 w-2.5 rounded-full bg-blue-500" />
                 <span className="text-lg font-semibold tracking-tight text-white">
                   Fatih
                 </span>
-              </div>
+              </Link>
               <p className="text-white/60 max-w-md">
                 Senior Product Designer crafting clean, functional, and scalable
                 digital experiences for the modern web.
@@ -62,7 +64,7 @@ export default function Footer() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 rounded-full bg-blue-600 text-white px-4 py-2 text-sm font-medium hover:bg-blue-500 transition"
                 >
                   Get in touch
@@ -78,10 +80,10 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="/work"
                   className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90 backdrop-blur hover:bg-white/10 transition"
                 >
-                  Download Resume
+                  View Work
                 </a>
               </div>
             </div>
@@ -93,18 +95,18 @@ export default function Footer() {
               <h3 className="text-sm font-medium text-white mb-4">Services</h3>
               <ul className="space-y-3">
                 {[
-                  "Product Design",
-                  "Design Systems",
-                  "Mobile Apps",
-                  "Web Development",
-                  "Photo Presets",
+                  { label: "Product Design", href: "/services" },
+                  { label: "Design Systems", href: "/services" },
+                  { label: "Mobile Apps", href: "/services" },
+                  { label: "Web Development", href: "/services" },
+                  { label: "Photo Presets", href: "/gallery" },
                 ].map((s) => (
-                  <li key={s}>
+                  <li key={s.label}>
                     <a
-                      href="#"
+                      href={s.href}
                       className="text-sm text-white/60 hover:text-white transition"
                     >
-                      {s}
+                      {s.label}
                     </a>
                   </li>
                 ))}
@@ -114,10 +116,10 @@ export default function Footer() {
               <h3 className="text-sm font-medium text-white mb-4">Sitemap</h3>
               <ul className="space-y-3">
                 {[
-                  { label: "Work", href: "#work" },
-                  { label: "Gallery", href: "#gallery" },
-                  { label: "Services", href: "#services" },
-                  { label: "Contact", href: "#contact" },
+                  { label: "Work", href: "/work" },
+                  { label: "Gallery", href: "/gallery" },
+                  { label: "Services", href: "/services" },
+                  { label: "Contact", href: "/contact" },
                 ].map((link) => (
                   <li key={link.label}>
                     <a

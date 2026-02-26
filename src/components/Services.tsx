@@ -109,6 +109,12 @@ export default function Services() {
               <p className="text-zinc-500 text-sm leading-relaxed max-w-xs">
                 Specialized in crafting digital experiences that blend aesthetic precision with functional depth for startups and enterprise.
               </p>
+              <a
+                href="/services"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-white text-black hover:bg-zinc-200 transition-colors"
+              >
+                View All Services
+              </a>
             </div>
 
             {/* Filter Navigation */}
