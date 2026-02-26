@@ -70,4 +70,4 @@ Deploy to [Vercel](https://vercel.com) or any Node.js host. Add `NEXT_PUBLIC_WEB
 
 ## License
 
-Created By [rohimdev.com](https://rohimdev.com)
+MIT License – see [LICENSE](LICENSE) for details.
